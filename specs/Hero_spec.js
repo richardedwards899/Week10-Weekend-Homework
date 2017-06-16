@@ -59,4 +59,11 @@ describe('Hero', function () {
     assert.strictEqual(5, hero.tasks[2].urgency);
   })
 
+  it('should be able to sort tasks by reward', function () {
+    hero.sortTasks("reward");
+    assert.strictEqual(10, hero.tasks[0].reward);
+    assert.strictEqual(15, hero.tasks[1].reward);
+    assert.strictEqual(20, hero.tasks[2].reward);
+  })
+
 })//describe
