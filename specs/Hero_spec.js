@@ -2,7 +2,7 @@ var assert = require('assert')
 var Hero = require('../Hero.js')
 var Food = require('../Food.js')
 var Task = require('../Task.js')
-
+var Rat = require('../Rat.js')
 
 describe('Hero', function () {
 
@@ -84,6 +84,15 @@ describe('Hero', function () {
 
     var incompleteTasks = hero.completedTasks(false);
     assert.strictEqual(2, incompleteTasks.length);
+  })
+
+  it('should lose health if food poisoned', function () {
+    var food = new Food("oats", 15);
+    var rat = new Rat();
+    rat.spoil(food);
+    hero.eat(food);
+
+    assert.strictEqual(80, hero.health);
   })
 
 })//describe

@@ -16,7 +16,10 @@ Hero.prototype = {
   },
 
   eat: function(food){
-
+    if (food.poisoned){
+      this.health -= 10;
+      return;
+    }
     if (_.isEqual(food, this.favouriteFood) ){
       this.health += (food.replenishment * 1.5);
     } else {
