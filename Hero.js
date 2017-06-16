@@ -13,6 +13,10 @@ Hero.prototype = {
     return "Ug! My name "+ this.name;
   },
 
+  eat: function(food){
+    this.health += food.replenishment;
+  },
+
 }
 
 module.exports = Hero;

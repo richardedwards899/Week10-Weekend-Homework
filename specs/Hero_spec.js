@@ -4,7 +4,7 @@ var Food = require('../Food.js')
 var Task = require('../Task.js')
 
 
-describe('Hero tests', function () {
+describe('Hero', function () {
 
   var hero;
 
@@ -30,6 +30,12 @@ describe('Hero tests', function () {
 
   it('should say their name', function () {
 		assert.strictEqual("Ug! My name Arnold", hero.talk());
+  })
+
+  it('should be able to eat food and replenish health', function () {
+    var nuts = new Food("nuts", 3);
+    hero.eat(nuts);
+    assert.strictEqual(93, hero.health);
   })
 
 })//describe
