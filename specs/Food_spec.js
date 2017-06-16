@@ -8,6 +8,4 @@ describe('Food tests', function () {
 		assert.strictEqual("berries", food.name);
     assert.strictEqual(5, food.replenishment);
 	})
-
-
 })
