@@ -26,6 +26,10 @@ Hero.prototype = {
 
   sortTasks: function(sortBy){
     this.tasks = _.sortBy(this.tasks, [ sortBy ]);
+  },
+
+  completeTask: function(taskIndex){
+    this.tasks[taskIndex].complete = true;
   }
 
 }

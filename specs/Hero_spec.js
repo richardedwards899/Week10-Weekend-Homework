@@ -66,4 +66,9 @@ describe('Hero', function () {
     assert.strictEqual(20, hero.tasks[2].reward);
   })
 
+  it('should be able to complete task', function () {
+    hero.completeTask(0);
+    assert.strictEqual(true, hero.tasks[0].complete);
+  })
+
 })//describe
