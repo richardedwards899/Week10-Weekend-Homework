@@ -30,6 +30,13 @@ Hero.prototype = {
 
   completeTask: function(taskIndex){
     this.tasks[taskIndex].complete = true;
+  },
+
+  completedTasks: function(completionStatus){
+    var tasksComplete =  _.filter(this.tasks, function(task){
+      return completionStatus == task.complete;
+    })
+    return tasksComplete;
   }
 
 }
