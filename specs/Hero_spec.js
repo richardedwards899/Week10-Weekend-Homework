@@ -28,4 +28,8 @@ describe('Hero tests', function () {
     assert.strictEqual(3, hero.tasks.length);
 	})
 
+  it('should say their name', function () {
+		assert.strictEqual("Ug! My name Arnold", hero.talk());
+  })
+
 })//describe

@@ -9,6 +9,10 @@ var Hero = function(name, health, favouriteFood, tasks){
 //Methods to add to Food
 Hero.prototype = {
 
+  talk: function(){
+    return "Ug! My name "+ this.name;
+  },
+
 }
 
 module.exports = Hero;
