@@ -7,5 +7,8 @@ describe('Food tests', function () {
 		var food = new Food("berries", 5);
 		assert.strictEqual("berries", food.name);
     assert.strictEqual(5, food.replenishment);
+    assert.strictEqual(false, food.poisoned);
 	})
+
+
 })
