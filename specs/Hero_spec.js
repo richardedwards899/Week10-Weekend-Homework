@@ -71,12 +71,19 @@ describe('Hero', function () {
     assert.strictEqual(true, hero.tasks[0].complete);
   })
 
-  it('should be able get completed task', function () {
+  it('should be able get completed tasks', function () {
     hero.completeTask(0);
     hero.completeTask(1);
 
     var completedTasks = hero.completedTasks(true);
     assert.strictEqual(2, completedTasks.length);
+  })
+
+  it('should be able get incomplete tasks', function () {
+    hero.completeTask(0);
+
+    var incompleteTasks = hero.completedTasks(false);
+    assert.strictEqual(2, incompleteTasks.length);
   })
 
 })//describe
