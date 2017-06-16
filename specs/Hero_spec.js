@@ -38,4 +38,10 @@ describe('Hero', function () {
     assert.strictEqual(93, hero.health);
   })
 
+  it('should be able to eat favourite food and replenish health at 1.5', function () {
+    var berries = new Food("berries", 5);
+    hero.eat(berries);
+    assert.strictEqual(97.5, hero.health);
+  })
+
 })//describe

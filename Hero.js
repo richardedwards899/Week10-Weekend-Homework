@@ -1,3 +1,5 @@
+var _ = require('lodash')
+
 //Constructor for Hero object
 var Hero = function(name, health, favouriteFood, tasks){
   this.name = name;
@@ -14,7 +16,12 @@ Hero.prototype = {
   },
 
   eat: function(food){
-    this.health += food.replenishment;
+
+    if (_.isEqual(food, this.favouriteFood) ){
+      this.health += (food.replenishment * 1.5);
+    } else {
+      this.health += food.replenishment;
+    }
   },
 
 }
